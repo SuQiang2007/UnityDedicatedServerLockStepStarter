@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Client.ClientUtils;
@@ -17,10 +18,9 @@ namespace Client.Net
 
         public static NetInputBuffer Instance { get; } = new();
 
-        public void Enqueue(int sFrameId, COperation op)
+        public void Enqueue(int sFrameId, Dictionary<ulong, COperation> opts)
         {
-            if(!_optQueue.ContainsKey(sFrameId)) _optQueue.Add(sFrameId, new Dictionary<ulong, COperation>());
-            _optQueue[sFrameId][op.ClientId] = op;
+            if (!_optQueue.TryAdd(sFrameId, opts)) throw new Exception("Logic error");
         }
     }
 }

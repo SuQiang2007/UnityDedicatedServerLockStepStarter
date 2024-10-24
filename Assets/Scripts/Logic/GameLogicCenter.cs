@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Client.ClientUtils;
 using Client.CommunicateObjs;
 using Client.Net;
+using Newtonsoft.Json;
 using Server.ServerUtils;
 using UnityEngine;
 
@@ -11,16 +12,12 @@ namespace Logic
     {
         public static GameLogicCenter Instance { get; } = new GameLogicCenter();
 
-        private int _lastFrameId;
-        public void PushGame()
+        public void PushGame(int frameId)
         {
-            Debug.Log(4);
-            NetInputBuffer.Instance.OptQueue.TryGetValue(SFrameId.NowId, out var opt);
+            NetInputBuffer.Instance.OptQueue.TryGetValue(frameId, out var opt);
             if(opt == null) return;
-            Debug.Log(5);
 
-            DoPushGame(_lastFrameId,opt);
-            _lastFrameId++;
+            DoPushGame(frameId,opt);
         }
 
         private void DoPushGame(int frameId, Dictionary<ulong, COperation> frameOpts)
@@ -28,7 +25,16 @@ namespace Logic
             Debug.Log($"DoPushGame===>{frameId}");
             foreach (var opt in frameOpts)
             {
-                Debug.Log($"DoPushGame===>{opt.Key}=>{opt.Value}");
+                Debug.Log($"DoPushGame===>{opt.Key}");
+                
+                foreach (KeyValuePair<ulong, COperation> entry in frameOpts)
+                {
+                    ulong clientId = entry.Key;      // 获取键（ulong类型的客户端ID）
+                    COperation operation = entry.Value; // 获取值（COperation类型的操作）
+
+                    // 处理操作
+                    Debug.Log($"ClientID: {clientId}, Operation: {operation.Move}");
+                }
             }
         }
     }

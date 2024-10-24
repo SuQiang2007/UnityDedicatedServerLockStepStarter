@@ -5,9 +5,9 @@ namespace Server.ServerUtils
         private static int _frameId;
         public static int NowId => _frameId;
 
-        public static void IncreaseId()
+        public static int IncreaseId()
         {
-            _frameId++;
+            return ++_frameId;
         }
     }
 }

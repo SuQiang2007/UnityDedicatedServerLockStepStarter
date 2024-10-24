@@ -1,0 +1,17 @@
+{
+    "name": "CSCommunication",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2211bcbd4b0dd40e39f88a85b7a33718",
+        "GUID:1491147abca9d7d4bb7105af628b223e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
