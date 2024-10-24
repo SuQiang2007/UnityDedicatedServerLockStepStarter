@@ -1,0 +1,22 @@
+{
+    "name": "ClientInput",
+    "rootNamespace": "",
+    "references": [
+        "GUID:1491147abca9d7d4bb7105af628b223e",
+        "GUID:2211bcbd4b0dd40e39f88a85b7a33718",
+        "GUID:a62a62aeed4a94330b8a37313155102f",
+        "GUID:bc3895297c80c4a559535e5e0869c26e",
+        "GUID:c0fa811f857254e319610c00e5210d8e",
+        "GUID:0e7dcdffb672646a1b717ec961b9fa55",
+        "GUID:e17afa4f2b7324790a015773bd6d1e72"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

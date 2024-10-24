@@ -1,0 +1,17 @@
+{
+    "name": "ClientNet",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2211bcbd4b0dd40e39f88a85b7a33718",
+        "GUID:a21ed52d5fb1541d3b99ec579b5e6021"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
